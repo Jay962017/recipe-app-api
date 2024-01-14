@@ -19,7 +19,6 @@ class CommandTests(SimpleTestCase):
         patched_getitem.return_value = True
 
         call_command('wait_for_db')
-
         self.assertEqual(patched_getitem.call_count, 1)
 
     @patch('time.sleep')
